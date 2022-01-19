@@ -1,0 +1,38 @@
+Enter the Size of Array: 4
+Enter 4 Elements: 6
+9
+3
+7
+Menu 
+1. Accept elements of an array
+2. Display array
+3. Search the element within array given by the use
+4. Sorting the Array
+5. Exit
+Select an Option : 3
+Enter the number you want to search: 6
+Item found at position 1
+Menu 
+1. Accept elements of an array
+2. Display array
+3. Search the element within array given by the use
+4. Sorting the Array
+5. Exit
+Select an Option : 4
+Sorted array :
+0 3 6 7 9 
+Menu 
+1. Accept elements of an array
+2. Display array
+3. Search the element within array given by the use
+4. Sorting the Array
+5. Exit
+Select an Option : 2
+0 3 6 7 9 
+Menu 
+1. Accept elements of an array
+2. Display array
+3. Search the element within array given by the use
+4. Sorting the Array
+5. Exit
+Select an Option : 5
