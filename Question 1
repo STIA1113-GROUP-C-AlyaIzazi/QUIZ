@@ -1,0 +1,106 @@
+package Question1;
+
+import java.util.Scanner;
+
+public class Menu2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		   
+	    int i, element, n;
+	      Scanner sc = new Scanner(System.in);
+	      
+	      System.out.print("Enter the Size of Array: ");
+	      n = sc.nextInt();
+	      int[] arr = new int[n+1];
+	      System.out.print("Enter " +n+ " Elements: ");
+	      for(i=0; i<n; i++)
+	         arr[i] = sc.nextInt();
+	        int option;
+	        do 
+	        {
+	            System.out.println("Menu ");
+	            System.out.println("1. Accept elements of an array");
+	            System.out.println("2. Display array");
+	            System.out.println("3. Search the element within array given by the use");
+	            System.out.println("4. Sorting the Array");
+	            System.out.println("5. Exit");
+	            System.out.print("Select an Option : ");
+	            option = sc.nextInt();
+	        
+	            switch (option) 
+	            {
+	                case 1:
+	                    readArray(arr);
+	                    break;
+	                case 2:
+	                    displayArray(arr);
+	                    break;
+	                case 3:
+	                    System.out.print("Enter the number you want to search: ");
+	                    int item = sc.nextInt();
+	                    int index = searchArray(arr, item);
+	                    if (index == -1) 
+	                    {
+	                        System.out.println("Item not found");
+	                    }
+	                    else 
+	                    {
+	                        System.out.println("Item found at position " + (index + 1));
+	                    }
+	                    break;
+	                case 4:
+	                    System.out.println("Sorted array :");
+	                    sortArray(arr);
+	                    displayArray(arr);
+	                    break;
+	            }
+	        } while (option != 5);
+	    }
+	    
+	    static void readArray(int[] array) 
+	    {
+	        for (int i = 0; i < array.length; i++)
+	        {
+	           array[i] = sc.nextInt();
+	        }
+	    }
+
+	    static void displayArray(int[] array) 
+	    {
+	        for (int i = 0; i < array.length; i++)
+	        {
+	            System.out.print(array[i] + " ");
+	        }
+	        System.out.println();
+	    }
+
+	    static int searchArray(int[] array, int data) 
+	    {
+	        for (int i = 0; i < array.length; i++)
+	        {
+	            if(array[i] == data)
+	            {
+	                return i;
+	            }
+	        }        
+	        return -1;
+	    }
+	    
+	    static void sortArray(int[] array) 
+	    {
+	        for (int i = 0; i < array.length - 1; i++)
+	        {
+	            for(int j = 0; j < array.length -i-1; j++)
+	            {
+	                if(array[j] > array[j+1])
+	                {
+	                    int temp = array[j];
+	                    array[j] = array[j+1];
+	                    array[j+1] = temp;
+	                }
+	            }
+	        }          
+	    }
+	    
+	}
