@@ -1,0 +1,25 @@
+package Question1;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Question2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.println("Key in number of words:");
+		int num = sc.nextInt();
+		
+		System.out.println("Key in the words:");
+		ArrayList<String> words = new ArrayList<String>();
+		
+		for(int i=0; i<num; i++) {
+			words.add(sc.next());
+			
+		}
+		
+		
+	}
+
+}
