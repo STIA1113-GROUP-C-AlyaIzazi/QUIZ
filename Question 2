@@ -18,8 +18,52 @@ public class Question2 {
 			words.add(sc.next());
 			
 		}
-		
-		
-	}
+
+       System.out.println("Total words counted : ");
+
+       ArrayList<String> wordsNoDuplicates = removeDuplicates(words);
+     
+       for (String word: wordsNoDuplicates) {
+    	
+        int a = count(words, word);
+        System.out.println(word + ": " + a);
+     }
+  }
+
+
+      public static int count(ArrayList<String> values, String n) {
+	
+       int counter = 0;
+       for (String m: values) {
+    	
+       if (m.equals(n)) {
+            counter++;
+        }
+    }
+    return counter;
+}
+
+
+public static ArrayList<String> removeDuplicates(ArrayList<String> values) {
+	
+    ArrayList<String> noDuplicates = new ArrayList<>();
+    
+    for(String m: values) {
+        if (! noDuplicates.contains(m)) {
+            noDuplicates.add(m);
+        }
+    }
+    
+    return noDuplicates;
+}
 
 }
+
+
+		
+		
+		
+		
+	
+
+
